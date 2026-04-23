@@ -9,56 +9,80 @@
 </head>
 
 <body>
+
+    <video autoplay muted loop id="bg-video">
+        <source src="carsport.mp4" type="video/mp4">
+    </video>
+
     <div id="search">
         <div class="title">
             <h1>Car Rental</h1>
             <p>Find the perfect car for your next adventure</p>
             <hr>
         </div>
+
         <div class="form-container">
             <div class="form-group">
                 <label for="pickup">Rental Location:</label>
                 <select id="pickup" name="pickup">
                     <option value="">Select Location</option>
-                    <option value="location1">Yogyakarta</option>
-                    <option value="location2">Bali</option>
+                    <option value="yogyakarta">Yogyakarta</option>
+                    <option value="bali">Bali</option>
                 </select>
             </div>
+
             <div class="form-group">
                 <label for="pickup-date">Rental Start Date:</label>
-                <input type="date" id="pickup-date" name="pickup-date">
+                <input type="date" id="pickup-date">
             </div>
+
             <div class="form-group">
                 <label for="return-date">Rental End Date:</label>
-                <input type="date" id="return-date" name="return-date">
+                <input type="date" id="return-date">
             </div>
+
             <button type="submit">Search</button>
         </div>
     </div>
 
+  
     <div class="car-list">
-        <h2>Car List</h2>
+        <h2>Available Cars</h2>
+
         <div class="car-item">
-            <img src="url" alt="Car 1">
-            <h3>Car 1</h3>
-            <p>Car Detail</p>
+            <img src="avanza.jpg" alt="Toyota Avanza">
+            <h3>Toyota Avanza</h3>
+            <p>Mobil keluarga nyaman dan irit</p>
+            <span class="price">Rp300.000 / hari</span>
+            <button class="btn-book">Book Now</button>
         </div>
+
         <div class="car-item">
-            <img src="url" alt="Car 2">
-            <h3>Car 2</h3>
-            <p>Car Detail</p>
+            <img src="pajero.jpg" alt="Pajero">
+            <h3>Mitsubishi Pajero</h3>
+            <p>Mobil SUV premium dan tangguh</p>
+            <span class="price">Rp800.000 / hari</span>
+            <button class="btn-book">Book Now</button>
         </div>
+
         <div class="car-item">
-            <img src="url" alt="Car 2">
-            <h3>Car 2</h3>
-            <p>Car Detail</p>
+            <img src="brio.jpg" alt="Honda Brio">
+            <h3>Honda Brio</h3>
+            <p>Mobil kecil, lincah untuk kota</p>
+            <span class="price">Rp250.000 / hari</span>
+            <button class="btn-book">Book Now</button>
         </div>
+
         <div class="car-item">
-            <img src="url" alt="Car 2">
-            <h3>Car 2</h3>
-            <p>Car Detail</p>
+            <img src="innova.jpg" alt="Innova">
+            <h3>Toyota Innova</h3>
+            <p>Nyaman untuk perjalanan jauh</p>
+            <span class="price">Rp500.000 / hari</span>
+            <button class="btn-book">Book Now</button>
         </div>
+
     </div>
+
 </body>
 
 </html>
