@@ -1,18 +1,23 @@
+/* RESET DASAR */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* SECTION SEARCH */
 #search {
     width: 100%;
     height: 50em;
-    background-image: url("https://images.unsplash.com/photo-1610809376778-928ee2c3a561?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-image: url("https://images.unsplash.com/photo-1610809376778-928ee2c3a561?q=80&w=2340&auto=format&fit=crop");
     background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-body {
-    margin: 0;
-}
-
+/* TITLE */
 .title {
     color: white;
     text-align: center;
@@ -32,24 +37,32 @@ body {
     width: 50em;
     max-width: 90vw;
     border: 1px solid white;
-    margin: 3em auto;
+    margin: 2em auto;
     opacity: 0.5;
 }
 
+/* FORM */
 .form-container {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3em;
+    padding: 2em;
     border-radius: 1em;
     color: white;
-    gap: 2em;
+    gap: 1.5em;
+    flex-wrap: wrap;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
 }
 
 .form-container select,
 .form-container input {
-    box-sizing: border-box;
     padding: 0.5em;
     border: none;
     border-radius: 0.5em;
@@ -57,43 +70,112 @@ body {
     height: 2.5em;
 }
 
+/* BUTTON SEARCH */
 .form-container button {
-    padding: 0.5em 1em;
+    padding: 0.6em 1.5em;
     border: none;
     border-radius: 0.5em;
     background-color: #ff5722;
     color: white;
     cursor: pointer;
+    font-weight: bold;
 }
 
+.form-container button:hover {
+    background-color: #e64a19;
+}
+
+/* CAR LIST */
 .car-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     gap: 1.5em;
-    align-content: center;
     padding: 2em 1em;
-    align-items: start;
     max-width: 80rem;
     margin: 0 auto;
 }
 
+/* JUDUL */
 .car-list h2 {
     font-size: 2em;
-    margin: 2em 0;
+    margin: 1em 0;
     grid-column: 1 / -1;
     text-align: center;
 }
 
+/* CARD MOBIL */
 .car-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: min(22rem, 100%);
+    background: white;
+    border-radius: 1em;
+    padding: 1em;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
 }
 
+.car-item:hover {
+    transform: translateY(-10px);
+}
+
+/* GAMBAR */
 .car-item img {
     width: 100%;
-    height: auto;
+    height: 200px;
     object-fit: cover;
+    border-radius: 0.5em;
+}
+
+/* JUDUL MOBIL */
+.car-item h3 {
+    margin: 0.5em 0;
+}
+
+/* DESKRIPSI */
+.car-item p {
+    color: #555;
+}
+
+/* HARGA */
+.price {
+    display: block;
+    font-weight: bold;
+    color: #ff5722;
+    margin: 0.5em 0;
+}
+
+/* BUTTON BOOK */
+.btn-book {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.btn-book:hover {
+    background-color: #e64a19;
+}
+
+/* VIDEO BACKGROUND */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* OVERLAY BIAR TEKS JELAS */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: -1;
 }
